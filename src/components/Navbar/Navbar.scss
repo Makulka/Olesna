@@ -3,10 +3,11 @@
 
 body {
   .navbar {
-    font: 16px "Century Gothic", Futura, sans-serif;    
+    font: 16px Noto Serif,serif;    
   }
 }
 .navbar {
+  background-color: $navbar-color;
   .navbar-brand.brand {
     color: $primary-color;
     font-weight: bold;
@@ -14,10 +15,26 @@ body {
     &:hover {
       color: $primary-color;
     }
+  }  
+  .language-button {    
+    background-size: 100%;
+    cursor:pointer;
+    border: 1px solid black;
+    width: 30px;
+    height: 20px;
+    &:focus {
+      outline: none;
+    }
   }
-  .nav-link.portfolio-link {
-    color: $primary-color;
+  .czech-flag {
+    background-image: url(../../images/cz.svg);
   }
+  .english-flag {
+    background-image: url(../../images/gb.svg);
+  }
+ 
+  
+  
   .nav-link {
     position: relative;
     &:hover {
