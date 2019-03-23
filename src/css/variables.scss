@@ -1,7 +1,10 @@
-$primary-color: green;
-$primary-color-tinted: mix(white, $primary-color, 20%);
+$primary-color: rgb(92, 58, 19);
+$primary-color-tinted: mix(white, $primary-color, 60%);
+$primary-color-tinted-half: mix(white, $primary-color, 30%);
 $primary-color-darker: mix(black, $primary-color, 50%);
-$navbar-color: #F5F5F5;
+$navbar-background-color: #C4A684;
+$navbar-background-color-darker:mix(black, $navbar-background-color, 50%);
+$navbar-font-color: black;
 
 
  

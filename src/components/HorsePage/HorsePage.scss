@@ -1,0 +1,58 @@
+@import '../../css/variables.scss';
+@import '../../css/font.scss';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.content {
+  margin-top: 50px;
+  font-size: calc(10px + 2vmin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  font: 18px Noto Serif,serif;  
+}
+.header {
+  color: $primary-color-darker;
+  text-shadow: 1.2px 1.2px black;
+}
+
+.main {
+  margin-top: 30px;
+  text-align: justify;  
+  .horse-selection-row {
+    margin-bottom: 20px;
+  }  
+  .horse-buttons {
+    button {
+      width: 120px;
+      height: 30px;
+      background-color: $primary-color-tinted;
+      box-shadow: 4px 4px $primary-color-darker;
+      border: none;
+      &:active {
+        box-shadow: 3px 3px $primary-color-darker;
+        transform: translate(1px, 1px);
+      }
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        background-color: $primary-color-tinted-half;
+      }
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      &.selected {
+        background-color: $primary-color;
+        &:focus{
+          outline: none;
+        }
+      }
+    }
+  }
+  .horse-image {
+    width: 100%;
+    opacity: 1;
+    box-shadow: 4px 4px $primary-color-darker;
+  }
+}

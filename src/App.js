@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <div className="main-content-container">
+        <div className="container main-content-container">
           < Navbar /> 
         </div>        
       </div>

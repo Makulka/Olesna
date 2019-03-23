@@ -1,27 +1,56 @@
-
 @import '../../css/variables.scss';
 @import '../../css/font.scss';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 .content {
-  margin-top: 50px;
+  margin-top: 100px;
   font-size: calc(10px + 2vmin);
   display: flex;
   flex-direction: column;
   align-items: center;  
-  font: 18px Noto Serif,serif;  
+  font: 16px "Century Gothic", Futura, sans-serif;
 }
 
 .main {
   margin-top: 50px;
-  text-align: center;  
+  text-align: justify;  
+  .cottage-image {
+    width: 250px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    box-shadow: 4px 4px $primary-color-darker;
+    opacity: 1;
+  }
 }
+.slick-slider {
+   img {
+     max-width: 98%;
+     margin: 0 auto;
+     box-shadow: 4px 4px $primary-color-darker;
+     background-color: black;
+     opacity: 1;
+   }
+   .slick-prev:before, .slick-next:before {
+    color: $primary-color-darker;
+    margin-left: 0;
+    opacity: 1;
+   }
+   @media (max-width: 575.98px) {
+     button .slick-arrow {
+       display: none;
+     }
+     .main img{       
+         display: none;
+     }
+   }
 
-.changing-image {
-  background: url(../../images/cottage1.JPG);
-  background-size: auto 100%;
-  width: 400px;
-  height: 300px;
-}
+} 
+
+
+
+
 // .header {
 //   display: flex;
 //   flex-direction: row;
