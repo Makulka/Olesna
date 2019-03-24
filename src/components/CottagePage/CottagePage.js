@@ -12,7 +12,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
 const Header = (props) => {
-  return(
+  return( 
     <header className="header">         
       <h1>{props.title}</h1>           
     </header>
