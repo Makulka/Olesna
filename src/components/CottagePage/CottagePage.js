@@ -17,7 +17,7 @@ const Main = (props) => {
   return (
     <main className="main row justify-content-md-center"> 
       <div className="col-md-10">
-        <img className = "cottage-image" src={cottage1}/>
+        <img className = "cottage-image" src={cottage1} alt="cottage"/>
         <p>{props.paragraph}</p>
       </div>      
     </main>
@@ -43,10 +43,10 @@ class SimpleSlider extends Component {
     };
     return (
       <Slider {...settings}>
-        <div><img src={cottage1}/></div>
-        <div><img src={cottage1}/></div>
-        <div><img src={cottage1}/></div>
-        <div><img src={cottage1}/></div>
+        <div><img src={cottage1} alt="cottage"/></div>
+        <div><img src={cottage1} alt="cottage"/></div>
+        <div><img src={cottage1} alt="cottage"/></div>
+        <div><img src={cottage1} alt="cottage"/></div>
       </Slider>
     );
   }

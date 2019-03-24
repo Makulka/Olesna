@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import cottage1 from './images/cottage1.JPG';
 import Linda from './images/Linda.JPG';
 import Zlatka from './images/Zlatka.JPG';
 import Borka from './images/Borka.JPG';
+import Betty from './images/Betty.JPG';
+import Zorka from './images/Zorka.JPG';
+import Bara from './images/Bara.JPG';
 import './HorsePage.scss';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
@@ -36,16 +38,16 @@ class Main extends Component {
         <div className="row justify-content-md-center horse-selection-row">
           <div className="col-md-10">
             <div className="row justify-content-md-center align-items-center">
-              <div className="col-md-2 horse-buttons">
+              <div className="col-md-4 col-lg-2 horse-buttons">
                 <button name={Linda} ref="button" onClick={this.handleClick} className={this.state.horse === Linda ? "selected" : ""}>Linda</button>
                 <button name={Borka} ref="button" onClick={this.handleClick} className={this.state.horse === Borka ? "selected" : ""}>Borka</button>
                 <button name={Zlatka} onClick={this.handleClick} className={this.state.horse === Zlatka ? "selected" : ""}>Zlatka</button>
-                <button>Betty</button>
-                <button>Zorka</button>
-                <button>Bara</button>
+                <button name={Betty} onClick={this.handleClick} className={this.state.horse === Betty ? "selected" : ""}>Betty</button>
+                <button name={Zorka} onClick={this.handleClick} className={this.state.horse === Zorka ? "selected" : ""}>Zorka</button>
+                <button name={Bara} onClick={this.handleClick} className={this.state.horse === Bara ? "selected" : ""}>Bara</button>
               </div>
-              <div className="col-md-4">
-                <img src={this.state.horse} className="horse-image"/>
+              <div className="col-md-6 col-lg-5 col-xl-4">
+                <img src={this.state.horse} className="horse-image" alt="horse"/>
               </div>
             </div>
           </div>
@@ -79,11 +81,13 @@ class SimpleSlider extends Component {
       ]
     };
     return (
-      <Slider {...settings}>
-        <div><img src={cottage1}/></div>
-        <div><img src={Linda}/></div>
-        <div><img src={Zlatka}/></div>
-        <div><img src={Borka}/></div>
+      <Slider {...settings}>        
+        <div><img src={Linda} alt="Linda"/></div>
+        <div><img src={Zlatka} alt="Zlatka"/></div>
+        <div><img src={Borka} alt="Borka"/></div>
+        <div><img src={Betty} alt="Betty"/></div>
+        <div><img src={Zorka} alt="Zorka"/></div>
+        <div><img src={Bara} alt="Bara"/></div>
       </Slider>
     );
   }

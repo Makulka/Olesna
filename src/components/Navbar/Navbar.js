@@ -3,7 +3,7 @@ import './Navbar.scss';
 import HomePage from '../HomePage/HomePage';
 import CottagePage from '../CottagePage/CottagePage';
 import HorsePage from '../HorsePage/HorsePage';
-// import GithubPage from '../Github/GithubPage';
+import Footer from '../Footer/Footer';
 import { Route } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
@@ -21,16 +21,16 @@ class Navbar extends Component {
       var iconClass = "english-flag";
       var navbarBrand = "At Eliska's and Fanda's";
       var home = "Home";
-      var village = "Village Olesna";
+      var village = "Village Olešná";
       var cottage = "Our cottage";
       var horses = "Our horses";
     } else {
-      var iconClass = "czech-flag";
-      var navbarBrand = "U Elisky a Fandy";
-      var home = "Uvod";
-      var village = "Obec Olesna";
-      var cottage = "Nase Chalupa";
-      var horses = "Nase kone";
+      iconClass = "czech-flag";
+      navbarBrand = "U Elišky a Fandy";
+      home = "Úvod";
+      village = "Obec Olešná";
+      cottage = "Naše Chalupa";
+      horses = "Naše koně";
     }    
     return (
       <div>
@@ -53,6 +53,7 @@ class Navbar extends Component {
         <Route exact path="/home" render={(routeProps) => (< HomePage {...routeProps} english={this.state.english}/>)}/>
         <Route path="/cottage" render={(routeProps) => (< CottagePage {...routeProps} english={this.state.english}/>)}/>
         <Route path="/horses" render={(routeProps) => (< HorsePage {...routeProps} english={this.state.english}/>)}/>
+        <Footer english={this.state.english}/>
       </div>
     )
   }
@@ -61,7 +62,3 @@ class Navbar extends Component {
 
 export default Navbar;
 
-
-
-
-// https://m.pardel.net/react-and-bootstrap-4-part-1-setup-navigation-d4767e2ed9f0
