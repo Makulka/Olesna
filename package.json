@@ -2,9 +2,9 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://herebegregs.uk/stana/portfolio/react/",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "google-maps-react": "^2.0.2",
     "jquery": "^3.3.1",
     "node-sass": "^4.11.0",
     "popper.js": "^1.14.7",

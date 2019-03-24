@@ -6,6 +6,7 @@ import HorsePage from '../HorsePage/HorsePage';
 import Footer from '../Footer/Footer';
 import { Route } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import LocationPage from '../LocationPage/LocationPage';
 
 class Navbar extends Component {
   constructor(props) {
@@ -19,22 +20,23 @@ class Navbar extends Component {
   render() {    
     if (this.state.english) {
       var iconClass = "english-flag";
-      var navbarBrand = "At Eliska's and Fanda's";
+      var navbarBrand = "At Eliška's and Fanda's";
       var home = "Home";
       var village = "Village Olešná";
-      var cottage = "Our cottage";
-      var horses = "Our horses";
+      var cottage = "Cottage";
+      var horses = "Horses";
+      var location = "Where to find us";
     } else {
       iconClass = "czech-flag";
       navbarBrand = "U Elišky a Fandy";
       home = "Úvod";
       village = "Obec Olešná";
-      cottage = "Naše Chalupa";
-      horses = "Naše koně";
+      cottage = "Chalupa";
+      horses = "Koně";
+      location = "Kde nás najdete";
     }    
     return (
       <div>
-        {/* <nav className="navbar navbar-color navbar-expand-lg navbar-margin"> */}
         <nav className="navbar navbar-dark navbar-color navbar-expand-lg navbar-margin">
           <div className="navbar-brand brand">{navbarBrand}</div>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +46,8 @@ class Navbar extends Component {
             <ul className="navbar-nav mr-auto">
               <NavLink to="/home" activeClassName="active" className="nav-link">{home}</NavLink> 
               <NavLink to="/cottage" activeClassName="active" className="nav-link">{cottage}</NavLink>
-              <NavLink to="/horses" activeClassName="active" className="nav-link">{horses}</NavLink>                   
+              <NavLink to="/horses" activeClassName="active" className="nav-link">{horses}</NavLink> 
+              <NavLink to="/location" activeClassName="active" className="nav-link">{location}</NavLink>                   
             </ul>  
             <a className="nav-link" href="https://www.olesna-be.cz/">{village}</a>
 			      <button className={"language-button "+ iconClass} onClick={this.handleButtonClick}></button>			
@@ -53,6 +56,7 @@ class Navbar extends Component {
         <Route exact path="/home" render={(routeProps) => (< HomePage {...routeProps} english={this.state.english}/>)}/>
         <Route path="/cottage" render={(routeProps) => (< CottagePage {...routeProps} english={this.state.english}/>)}/>
         <Route path="/horses" render={(routeProps) => (< HorsePage {...routeProps} english={this.state.english}/>)}/>
+        <Route path="/location" render={(routeProps) => (< LocationPage {...routeProps} english={this.state.english}/>)}/>
         <Footer english={this.state.english}/>
       </div>
     )

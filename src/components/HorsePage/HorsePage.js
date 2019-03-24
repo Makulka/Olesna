@@ -9,6 +9,12 @@ import './HorsePage.scss';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import Slider from "react-slick";
+import horse1 from './images/horse1.JPG'
+import horse2 from './images/horse2.JPG'
+import horse3 from './images/horse3.JPG'
+import horse4 from './images/horse4.JPG'
+import horse5 from './images/horse5.JPG'
+import horse6 from './images/horse6.JPG'
 
 const Header = (props) => {
   return(
@@ -55,7 +61,7 @@ class Main extends Component {
 
         <div className="row justify-content-md-center">
           <div className="col-md-10" >
-            <p>{this.props.paragraph}</p>
+            <p className="text">{this.props.paragraph}</p>
           </div> 
         </div>     
       </main>
@@ -82,12 +88,12 @@ class SimpleSlider extends Component {
     };
     return (
       <Slider {...settings}>        
-        <div><img src={Linda} alt="Linda"/></div>
-        <div><img src={Zlatka} alt="Zlatka"/></div>
-        <div><img src={Borka} alt="Borka"/></div>
-        <div><img src={Betty} alt="Betty"/></div>
-        <div><img src={Zorka} alt="Zorka"/></div>
-        <div><img src={Bara} alt="Bara"/></div>
+        <div><img src={horse1} alt="horse"/></div>
+        <div><img src={horse2} alt="horse"/></div>
+        <div><img src={horse3} alt="horse"/></div>
+        <div><img src={horse4} alt="horse"/></div>
+        <div><img src={horse5} alt="horse"/></div>
+        <div><img src={horse6} alt="horse"/></div>
       </Slider>
     );
   }
@@ -123,7 +129,7 @@ class HorsePage extends Component {
 export default HorsePage;
 
 const englishTitle = "Our Horses";
-const englishParagraph = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+const englishParagraph = "The barn is currently inhabited by six horses, with five of them being of a breed of Czech-Moravian Belgian horse and one is a Noriker. Bora was born on 22nd March 2014 and is purebred and of the color of chestnut. Bety was born on 7th June 2008 and is purebred and dark ginger. She has a doughter Bára that was born on 23rd March 2018. Zlatka was born on 19th May 2008. She is also purebred and ginger. She has a daughter called Zorka born on 9th March 2018. Linda was born on 4th May 2009 and she is a Noriker, of the colour of a light chestnut. We keep the horses just for our pleasure. Actually you could say that they are the masters of the whole estate and in charge. The only time they are busy is in May when we dress them and they set off to celebrate the old Czech spring traddition called máje in the surrounding villages. We also have two dogs – Dastik, an old dachshund and Giftik, probably a beagle, that someone threw out in front of the local pub. We cannot forget two cats, tabby Zuzanka and three-colored Františka. You might also spot a few mice around the yard and in the kitchen and several magpies in the trees."
 
-const czechTitle = "Nase kone";
-const czechParagraph = "Nalezame se v nadherne krajine vesnicky Olesna. Kdybyste nahodou nekdy jeli kolem, tak se u nas stavte a prijdte se podivat na nasi chaloupku a kone. I nasi pejsci vas moc radi uvidi."
+const czechTitle = "Naše kone";
+const czechParagraph = "Chlév je obydlen v současné době 6 koňmi, jedná se o plemeno česko-moravského belgického koně a jednu noričku. Bora:  nar. 22.3.2014, barvy prokvetlé ryzky, plnopůvodová. Bety: nar.7.6.2008, tmavá ryzka, plnopůvodová, zařazená do genových zdrojů. Bára: nar.  23.3-2018, dcera Bety. Zlatka:  nar. 19.5.2008, ryzka, také zařazená do genových zdrojů. Zorka:  nar 9. 3. 2018, dcera Zlatky. Linda:  nar. 4.5.2009 norický kůň světlá ryzka. Koně chová majitel jen pro svou radost a potěšení, Ony jsou vlastně pánem celé usedlosti a jim se podřizuje veškerý chod domácnosti. Pouze každý květen jsou zaneprázdněné. To je majitel nastrojí a vyráží s nimi oslavovat staročeské máje po okolních vesnicích. Mimo koní zde ještě žijí dva psi. Dastík, starý jezevčík a Giftík, asi beagl, kterého někdo vyhodil před místní hospodou. Nesmíme zapomenout na dvě kočičky, mourovatou Zuzanku a tříbarevnou Františku, občas také přeběhne pár myšek po dvoře i v kuchyni a několik strak na stromě."
