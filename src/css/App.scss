@@ -1,6 +1,8 @@
 .wrapper {
     background-image: url("../images/cottage1.JPG");
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: cener center;
     min-height: 100vh;
 }
 
@@ -12,4 +14,3 @@
 }
 
 
- 

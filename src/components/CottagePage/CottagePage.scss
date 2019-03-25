@@ -3,18 +3,8 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.content {
-  margin-top: 30px;
-  font-size: calc(10px + 2vmin);
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
-  font: 16px "Century Gothic", Futura, sans-serif;
-}
 
-.main {
-  margin-top: 50px;
-  text-align: justify;  
+.main {  
   .cottage-image {
     width: 250px;
     float: left;
@@ -28,84 +18,24 @@
   }
 }
 .slick-slider {
-   img {
-     max-width: 98%;
-     margin: 0 auto;
-     box-shadow: 4px 4px $primary-color-darker;
-     background-color: black;
-     opacity: 1;
-   }
-   .slick-prev:before, .slick-next:before {
+  img {
+    max-width: 98%;
+    margin: 0 auto;
+    box-shadow: 4px 4px $primary-color-darker;
+    background-color: black;
+    opacity: 1;
+  }
+  .slick-prev:before, .slick-next:before {
     color: $primary-color-darker;
     margin-left: 0;
     opacity: 1;
-   }
-   @media (max-width: 575.98px) {
-     button .slick-arrow {
-       display: none;
-     }
-     .main img{       
-         display: none;
-     }
-   }
+  }  
 
 } 
+@media (max-width: 575.98px) {
+  main .cottage-image{       
+      display: none;
+  }
+}
 
 
-
-
-// .header {
-//   display: flex;
-//   flex-direction: row;
-//   width: 100%;
-//   height: auto;
-//   align-items: center;
-//   justify-content: center;
-//   position: relative;
-//   .images {
-//     position: relative;
-//   }
-//   img {
-//     width: 50px;
-//   }
-//   h1 {
-//     display: inline-block;
-//     text-align: center;
-//   }
-//   .moving-logo {
-//     position: absolute;
-//     left: 0%;
-//     top: 8%;
-//     animation: logo-move infinite 5s linear;
-//     animation-direction: alternate;
-//     @media(max-width: 440px) {
-//       display: none;
-//     }
-//   }
-// }
-
-// .main {
-//   margin-top: 50px;
-//   text-align: center;
-//   .mobile-logo {
-//     height: 50vmin;
-//     @media(min-width: 440px) {
-//       display: none;
-//     }
-//   }
-// }
-
-// @keyframes logo-move {
-//   0% {
-//     transform: translate(0%, 0%) rotate(0deg) scale(1);
-//     opacity: 0.2;
-//   }
-//   50% {
-//     transform: translate(355%, 500%) rotate(360deg) scale(5);
-//     opacity: 1;
-//   }
-//   100% {
-//     transform: translate(710%, 0%) rotate(0deg) scale(1);
-//     opacity: 0.2;
-//   }
-// } 

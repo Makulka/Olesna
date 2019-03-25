@@ -17,22 +17,13 @@
   }
   
 }
-.content {
-  margin-top: 30px;
-  font-size: calc(10px + 2vmin);
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
-  font: 18px Noto Serif,serif;  
-}
+
 .header {
   color: $primary-color-darker;
   text-shadow: 1.2px 1.2px black;
 }
 
 .main {
-  margin-top: 30px;
-  text-align: justify;  
   .horse-selection-row {
     margin-bottom: 20px;
   }  
